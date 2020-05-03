@@ -1,0 +1,22 @@
+version: "3"
+services:
+  # telehealthbackend:
+  #   build: .
+  #   command: >
+  #     sh -c "
+  #       yarn init:db
+  #       yarn start:dev:docker"
+  #   ports:
+  #     - "8080:8080"
+  #   depends_on:
+  #     - postgres
+  #   environment:
+  #     DATABASE_URL: postgres://admin:admin_pass@postgres/backend_db
+  #     PORT: 8080
+  #     NODE_ENV: "development"
+  postgres:
+    image: postgres:9.4
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_DB: backend_db
+      POSTGRES_PASSWORD: admin_pass
